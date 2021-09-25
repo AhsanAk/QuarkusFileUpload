@@ -1,16 +1,30 @@
 package org.acme.rest.client.multipart;
 
-import javax.ws.rs.GET;
+import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
+
+import javax.inject.Inject;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/C:/Program Files/Git/FileUpload")
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+// @Path("/C:/Program Files/Git/FileUpload")
+@Path("/FileUpload")
 public class FileUploadResource {
 
-    @GET
+    @Inject
+    @RestClient
+    MultipartService service;
+
+    @POST
+    //@Path("/multipart")
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello RESTEasy";
+    public String sendFile() throws Exception {
+        MultipartBody body = new MultipartBody();
+        body.fileName = "greeting.txt";
+        body.file = new ByteArrayInputStream("HELLO WORLD".getBytes(StandardCharsets.UTF_8));
+        return service.sendMultipartData(body);
     }
 }
