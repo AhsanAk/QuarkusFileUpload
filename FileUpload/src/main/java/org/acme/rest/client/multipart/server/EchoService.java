@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/echo")
-public class EchoService  {
+public class EchoService {
 
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
