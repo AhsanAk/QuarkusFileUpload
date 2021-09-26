@@ -12,14 +12,14 @@ public class StorageObject {
 
     public Long id;
     public String name;
-    public Long size;
+    public long size;
     public String path;
     public static String TblName = "Objects";
 
     public StorageObject() {
     }
 
-    public StorageObject(Long id, String name, Long size, String path) {
+    public StorageObject(Long id, String name, long size, String path) {
         this.id = id;
         this.name = name;
         this.size = size;

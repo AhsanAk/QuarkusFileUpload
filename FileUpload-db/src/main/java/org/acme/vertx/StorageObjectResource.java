@@ -51,7 +51,6 @@ public class StorageObjectResource {
     }
 
     private void initdb() {
-        
         client.query("CREATE TABLE IF NOT EXISTS " + StorageObject.TblName + "  (id SERIAL PRIMARY KEY, name TEXT, size int, path TEXT)")
                 .execute().await().indefinitely();
     }

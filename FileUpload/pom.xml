@@ -28,19 +28,19 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  <dependencies>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-rest-client</artifactId>
-    </dependency>
+    <dependencies>
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-multipart</artifactId>
     </dependency>
-    <dependency>
+      <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-resteasy</artifactId>
-    </dependency>
+      <artifactId>quarkus-rest-client</artifactId>
+  </dependency> 
+ <dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-rest-client-jackson</artifactId>
+</dependency> 
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-arc</artifactId>

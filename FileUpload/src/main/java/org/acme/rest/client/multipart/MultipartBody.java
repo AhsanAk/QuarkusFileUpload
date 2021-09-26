@@ -12,15 +12,7 @@ public class MultipartBody {
     @FormParam("file")
     @PartType(MediaType.APPLICATION_OCTET_STREAM)
     public InputStream file;
-
-    // public void setFileData(byte[] fileData) {
-    // this.file = fileData;
-    // }
-
-    // public byte[] getFileData() {
-    // return file;
-    // }
-
+    
     @FormParam("fileName")
     @PartType(MediaType.TEXT_PLAIN)
     public String fileName;
